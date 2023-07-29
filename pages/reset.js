@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import s from "../components/updatePassword/UpdatePassword.module.css";
 import axios from "axios";
 
-export default function reset() {
+export default function Reset() {
   const [formData, setFormData] = useState({
     email: "",
   });

@@ -1,6 +1,6 @@
 import UpdatePassword from "../../components/updatePassword/UpdatePassword";
 import { useRouter } from "next/router";
-export default function changepass() {
+export default function Changepass() {
   const router = useRouter();
   const { token } = router.query;
   console.log(token);

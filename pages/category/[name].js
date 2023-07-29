@@ -3,7 +3,7 @@ import Container from '../../components/container/Container'
 import Pagination from '../../components/paginate/Paginate'
 import { useSelector } from 'react-redux'
 
-const category = () => {
+const Category = () => {
   const numPaginate = useSelector(s => s.numPaginate.value)
   const products = useSelector(s => s.productsByCategory.value)
 
@@ -34,4 +34,4 @@ const category = () => {
     </Container>
   )
 }
-export default category
+export default Category
