@@ -1,5 +1,23 @@
 {
   "/_app": "pages/_app.js",
+  "/ResetPassword/[pass]": "pages/ResetPassword/[pass].js",
   "/_error": "pages/_error.js",
+  "/FormCreateCategory": "pages/FormCreateCategory.js",
+  "/api/auth/singup": "pages/api/auth/singup.js",
+  "/api/hello": "pages/api/hello.js",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
+  "/changepass/[token]": "pages/changepass/[token].js",
+  "/create": "pages/create.js",
+  "/home": "pages/home.js",
+  "/product/[id]": "pages/product/[id].js",
+  "/checkout": "pages/checkout.js",
+  "/profile": "pages/profile.js",
+  "/login": "pages/login.js",
+  "/success": "pages/success.js",
+  "/register": "pages/register.js",
+  "/category/[name]": "pages/category/[name].js",
+  "/reset": "pages/reset.js",
+  "/team": "pages/team.js",
+  "/": "pages/index.js",
   "/_document": "pages/_document.js"
 }

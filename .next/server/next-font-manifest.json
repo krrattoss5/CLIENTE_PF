@@ -1,8 +1,14 @@
 {
   "pages": {
-    "/_app": []
+    "/_app": [],
+    "/FormCreateCategory": [],
+    "/home": [],
+    "/product/[id]": [],
+    "/profile": [],
+    "/category/[name]": [],
+    "/team": []
   },
   "app": {},
   "appUsingSizeAdjust": false,
-  "pagesUsingSizeAdjust": false
+  "pagesUsingSizeAdjust": true
 }
