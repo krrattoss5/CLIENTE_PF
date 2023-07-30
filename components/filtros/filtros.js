@@ -28,7 +28,7 @@ import {
 import { getSubCats } from "../../redux/actions/actionsSubCats";
 import SearchBar from "../searchBar/SearchBar";
 
-export const Filters = () => {
+export const Filtros = () => {
   const subCategory = useSelector((s) => s.subCategories.value);
   const category = useSelector((s) => s.categories.value);
   const flag = useSelector((s) => s.products.flag);

@@ -9,7 +9,7 @@ import {
 import { GiWeightLiftingUp } from "react-icons/gi";
 import { getProdsByCat } from "../../redux/actions/actionProduct";
 import { useDispatch } from "react-redux";
-import { Filters } from "../filtros/Filtros";
+import Filtros from "../filtros/Filtros";
 import { setFlag, clearFind } from "../../redux/features/productsSlice";
 
 const categories = [
@@ -78,7 +78,7 @@ function Category() {
         ))}
       </div>
       <div className="flex justify-center items-center mb-[10px] mt-[-10px] px-[100px] h-[50px] bg-[rgb(28,41,71,1)] w-[97vw] shadow-[4px_4px_5px_rgb(28,41,71,1)] rounded-[10px]">
-        <Filters />
+        <Filtros />
       </div>
     </div>
   );
