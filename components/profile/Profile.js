@@ -180,7 +180,7 @@ export default function Profile() {
           </div>
           <div className="absolute font-bold left-[0%] top-[0%] h-[100%] p-[15px_5px_10px_30px] rounded-[0_15%_0_0] w-[300px] flex flex-col items-start bg-[rgba(28,41,71,1)]">
             <div className="w-[250px] mb-[20px] rounded-full">
-              <Image
+              <img
                 className="w-[250px] mb-[20px] rounded-full"
                 src={userDetail.photo || uploadImage}
                 alt={`${userDetail.name} foto`}

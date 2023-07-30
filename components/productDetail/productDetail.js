@@ -121,7 +121,7 @@ export default function ProductDetail({ id }) {
             <div className="p-8 flex items-center justify-center h-full">
               <div className="flex gap-20">
                 <div className="ml-[20%] w-[30%]">
-                  <Image src={productById.image} alt={productById.name} />
+                  <img src={productById.image} alt={productById.name} />
                 </div>
                 <div>
                   <h1 className="text-3xl font-bold mb-4">

@@ -68,7 +68,7 @@ export default function Login() {
       </Head>
       <section className="mx-auto flex flex-col gap-50">
         <div className="title">
-          <Image
+          <img
             src={"/assets/Icon.png"}
             width="210"
             height={40}
@@ -135,7 +135,7 @@ export default function Login() {
               className={styles.button_custom}
             >
               Acceder con Google{" "}
-              <Image src={"/assets/google.svg"} alt='' width="20" height={20} />
+              <img src={"/assets/google.svg"} alt='' width="20" height={20} />
             </button>
           </div>
         </form>

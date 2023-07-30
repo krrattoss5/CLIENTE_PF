@@ -44,7 +44,7 @@ export default function Success() {
           {orderBuy.items &&
             orderBuy.items.map((p) => (
               <div key={p.name} className=" w-[370px] shadow-[1px_1px_20px_rgba(0,0,0,0.2)] rounded-md relative p-[10px] justify-start items-center mb-[5px] flex">
-                <Image
+                <img
                   className="w-[70px] rounded-full mr-[20px]"
                   src={p.image}
                   alt={p.name}

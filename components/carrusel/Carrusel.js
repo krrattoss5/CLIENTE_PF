@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Slider from 'react-slick'
 import Image from 'next/image';
 const slides = [
@@ -55,12 +56,12 @@ function MyCarousel() {
             alignItems: 'center',
             justifyContent: 'center',
             height: '480px',
-            width:"100vw",
             boxShadow: '1px'
           }}>
-            <Image src={slide.image} alt={slide.title} width={0} height={0}
+            <img src={slide.image} alt={slide.title}
               style={{
                 height: '100%',
+                width: '100vw',
                 overflow: 'hidden',
                 objectFit: 'cover',
                 // oculta la parte visible de la imagen que sobresale

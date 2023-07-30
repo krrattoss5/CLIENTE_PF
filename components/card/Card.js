@@ -75,7 +75,7 @@ export default function Card(props) {
     >
       <Link href={`/product/${id}`}>
         <div className="flex flex-col justify-center items-center">
-          <Image src={image} alt={name} className="w-[220px] h-[200px] gap-4" />
+          <img src={image} alt={name} className="w-[220px] h-[200px] gap-4" />
         </div>
       </Link>
 

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Container from "../components/container/Container";
 import Image from "next/image";
 
@@ -15,7 +16,7 @@ const team = () => {
 
         <div className="flex flex-wrap items-start justify-start items-center ml-20 mr-20">
           <div className="w-[250px] h-[350px] bg-white shadow-[4px_4px_15px_rgba(0,0,0,0.2)] rounded px-8 pt-5 pb-5 m-[10px] hover:scale-105 hover:shadow-[4px_4px_15px_rgba(0,0,0,0.7)]">
-            <Image
+            <img
               src="/team_pics/PerfilMaxi.jpeg"
               alt="Maximiliano Cassol Montagner"
               className=" w-80 "
@@ -27,7 +28,7 @@ const team = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
+                <img
                   className="w-20 "
                   src="/team_pics/linkedin.jpg"
                   alt="linkedin"
@@ -38,13 +39,13 @@ const team = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image className="w-20 " src="/team_pics/git.jpg" alt="github" />
+                <img className="w-20 " src="/team_pics/git.jpg" alt="github" />
               </a>
             </div>
           </div>
 
           <div className="w-[250px] h-[350px] bg-white shadow-[4px_4px_15px_rgba(0,0,0,0.2)] rounded px-8 pt-5 pb-5 m-[10px] hover:scale-105 hover:shadow-[4px_4px_15px_rgba(0,0,0,0.7)]">
-            <Image
+            <img
               src="/team_pics/PerfilNico.png"
               alt="Nicolas Aguilera"
               className="w-80 "
@@ -56,7 +57,7 @@ const team = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
+                <img
                   className="w-20 "
                   src="/team_pics/linkedin.jpg"
                   alt="linkedin"
@@ -67,13 +68,13 @@ const team = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image className="w-20 " src="/team_pics/git.jpg" alt="github" />
+                <img className="w-20 " src="/team_pics/git.jpg" alt="github" />
               </a>
             </div>
           </div>
 
           <div className="w-[250px] h-[350px] bg-white shadow-[4px_4px_15px_rgba(0,0,0,0.2)] rounded px-8 pt-5 pb-5 m-[10px] hover:scale-105 hover:shadow-[4px_4px_15px_rgba(0,0,0,0.7)] ">
-            <Image
+            <img
               src="/team_pics/PerfilJosefina.png"
               alt="Josefina eciolaza"
               className="w-80 "
@@ -85,7 +86,7 @@ const team = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
+                <img
                   className="w-20 "
                   src="/team_pics/linkedin.jpg"
                   alt="linkedin"
@@ -96,13 +97,13 @@ const team = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image className="w-20 " src="/team_pics/git.jpg" alt="github" />
+                <img className="w-20 " src="/team_pics/git.jpg" alt="github" />
               </a>
             </div>
           </div>
 
           <div className="w-[250px] h-[350px] bg-white shadow-[4px_4px_15px_rgba(0,0,0,0.2)] rounded px-8 pt-5 pb-5 m-[10px] hover:scale-105 hover:shadow-[4px_4px_15px_rgba(0,0,0,0.7)]">
-            <Image
+            <img
               src="/team_pics/PerfilDidier.png"
               alt="Didier Pereira"
               className="w-80 "
@@ -114,7 +115,7 @@ const team = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
+                <img
                   className="w-20 "
                   src="/team_pics/linkedin.jpg"
                   alt="linkedin"
@@ -125,7 +126,7 @@ const team = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image className="w-20 " src="/team_pics/git.jpg" alt="github" />
+                <img className="w-20 " src="/team_pics/git.jpg" alt="github" />
               </a>
             </div>
           </div>
@@ -133,7 +134,7 @@ const team = () => {
 
         <div className=" flex justify-start items-center ml-20 mr-20">
           <div className="w-[250px] h-[350px] bg-white shadow-[4px_4px_15px_rgba(0,0,0,0.2)] rounded px-8 pt-5 pb-5 m-[10px] hover:scale-105 hover:shadow-[4px_4px_15px_rgba(0,0,0,0.7)]">
-            <Image
+            <img
               src="/team_pics/PerfilKevin.png"
               alt="Kevin Cabello"
               className="w-80 "
@@ -145,7 +146,7 @@ const team = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
+                <img
                   className="w-20 "
                   src="/team_pics/linkedin.jpg"
                   alt="linkedin"
@@ -156,13 +157,13 @@ const team = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image className="w-20 " src="/team_pics/git.jpg" alt="github" />
+                <img className="w-20 " src="/team_pics/git.jpg" alt="github" />
               </a>
             </div>
           </div>
 
           <div className="w-[250px] h-[350px] bg-white shadow-[4px_4px_15px_rgba(0,0,0,0.2)] rounded px-8 pt-5 pb-5 m-[10px] hover:scale-105 hover:shadow-[4px_4px_15px_rgba(0,0,0,0.7)] ">
-            <Image
+            <img
               src="/team_pics/PerfilGabriela.jpeg"
               alt="Gabriela Viera"
               className="w-80 "
@@ -174,7 +175,7 @@ const team = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
+                <img
                   className="w-20 "
                   src="/team_pics/linkedin.jpg"
                   alt="linkedin"
@@ -185,13 +186,13 @@ const team = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image className="w-20 " src="/team_pics/git.jpg" alt="github" />
+                <img className="w-20 " src="/team_pics/git.jpg" alt="github" />
               </a>
             </div>
           </div>
 
           <div className="w-[250px] h-[350px] bg-white shadow-[4px_4px_15px_rgba(0,0,0,0.2)] rounded px-8 pt-5 pb-5 m-[10px] hover:scale-105 hover:shadow-[4px_4px_15px_rgba(0,0,0,0.7)]">
-            <Image
+            <img
               src="/team_pics/PerfilFederico.png"
               alt="Federico Gonzalez"
               className="w-80 "
@@ -203,7 +204,7 @@ const team = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image
+                <img
                   className="w-20 "
                   src="/team_pics/linkedin.jpg"
                   alt="linkedin"
@@ -214,7 +215,7 @@ const team = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image className="w-20 " src="/team_pics/git.jpg" alt="github" />
+                <img className="w-20 " src="/team_pics/git.jpg" alt="github" />
               </a>
             </div>
           </div>

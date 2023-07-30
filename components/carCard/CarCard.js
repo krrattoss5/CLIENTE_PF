@@ -26,7 +26,7 @@ export default function CarCard(props) {
     <div className=' w-[370px] shadow-[1px_1px_20px_rgba(0,0,0,0.2)] rounded-md relative p-[10px] justify-start items-center mb-[5px] flex'>
 
         <button onClick={()=>handlerDelete()} className=' border-sky-500 absolute right-1 top-1 w-[25px] bg-[#ff0000] text-white text-bold rounded-[1px_5px]'>x</button>
-        <Image className='w-[70px] rounded-full mr-[20px]' src={props.image} alt={props.name} />
+        <img className='w-[70px] rounded-full mr-[20px]' src={props.image} alt={props.name} />
 
         <div className='text-bold w-full font-bold'>
           <h2>{props.name}</h2>

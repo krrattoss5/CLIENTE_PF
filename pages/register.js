@@ -100,7 +100,7 @@ const Register = () => {
 
       <section className="mx-auto flex flex-col gap-50 ">
         <div className="title">
-          <Image
+          <img
             src={"/assets/Icon.png"}
             width="230"
             height={40}

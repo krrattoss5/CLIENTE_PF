@@ -64,7 +64,7 @@ export default function Nav() {
             </Link>
           ) : (
             <div className="relative rounded-full w-[50px] mr-[50px]">
-              <Image
+              <img
                 src={uploadImage}
                 alt="login"
                 onClick={() => handlerButton()}
