@@ -116,6 +116,7 @@ export const Filters = () => {
       dispatch(getCat());
       dispatch(getSubCats());
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // const orderSubCategoryAlphabetic = (e) => {

@@ -39,6 +39,7 @@ const FormCreateProduct = () => {
     if (subcategories.length < 1) {
       dispatch(getSubCats());
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categ]);
 
   const handlerSubmit = async (e) => {

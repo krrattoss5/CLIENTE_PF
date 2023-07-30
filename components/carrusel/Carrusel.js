@@ -1,4 +1,5 @@
 import Slider from 'react-slick'
+import Image from 'next/image';
 const slides = [
   {
     id: 1,
@@ -56,7 +57,7 @@ function MyCarousel() {
             height: '480px',
             boxShadow: '1px'
           }}>
-            <img src={slide.image} alt={slide.title}
+            <Image src={slide.image} alt={slide.title}
               style={{
                 height: '100%',
                 width: '100vw',

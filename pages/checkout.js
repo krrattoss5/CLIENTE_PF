@@ -8,8 +8,8 @@ export default function MPButton() {
   const item = useSelector((s) => s.stack.value);
 
   const items = {
-    items:item,
-    email:email
+    items:item
+    //email:email
   }
 
   useEffect(() => {
@@ -20,8 +20,8 @@ export default function MPButton() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          items: items,
-          email: 'harcodeo@maxi.com'
+          items: items
+          //email: 'harcodeo@maxi.com'
         }),
       });
 
@@ -50,7 +50,8 @@ export default function MPButton() {
     };
 
     fetchCheckout();
-  }, [items, session]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return <div className="cho-container"></div>;
 }

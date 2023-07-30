@@ -22,10 +22,12 @@ export default function Home() {
 
   useEffect(() => {
     dispatch(forceCurrent(1));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [products]);
 
   useEffect(() => {
     dispatch(forceCurrent(1));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [find]);
 
   return (

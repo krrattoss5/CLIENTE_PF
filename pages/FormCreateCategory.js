@@ -32,7 +32,7 @@ export default function CreateCategory() {
     if (subcategories.length < 1) {
       dispatch(getSubCats());
     }
-  }, [categ]);
+  }, [categ, subcategories.length,dispatch]);
 
   const handlerInput = (e) => {
     if (e.target.id === "category") setCat({ ...cat, name: e.target.value })
@@ -136,7 +136,7 @@ export default function CreateCategory() {
 
             <div className="">
               {categ.map((category) => {
-                return <div className="">{category.name}</div>;
+                return <div key={`name${category.name}`} className="">{category.name}</div>;
               })}
             </div>
           </form>
@@ -156,12 +156,12 @@ export default function CreateCategory() {
 
             <div className="">
               {subcategories.map((subcategory) => {
-                return <div className="">{subcategory.name}</div>;
+                return <div key={subcategory.name} className="">{subcategory.name}</div>;
               })}
             </div>
           </form>
         </div>
-      </div>      
+      </div>
       </div>
       <hr></hr>
     </Container>

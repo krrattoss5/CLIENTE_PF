@@ -34,6 +34,7 @@ export default function Car() {
     if (stocks) {
       dispatch(addStorageProducts(stocks));
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -44,6 +45,7 @@ export default function Car() {
       aux = aux + p.price * p.quantity;
     });
     dispatch(updateTotal(aux));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [stock]);
 
   useEffect(() => {
@@ -58,6 +60,7 @@ export default function Car() {
       total: totalS,
       userId: inSession.id,
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [items]);
 
   const handlerShow = () => {

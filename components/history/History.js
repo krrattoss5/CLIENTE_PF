@@ -56,7 +56,7 @@ export default function History() {
           console.error("Error fetching history:", error);
         });
     }
-  }, [inSession.typeUser, dispatch]);
+  }, [inSession.typeUser, dispatch, inSession.id]);
 
   return (
     <div>

@@ -13,6 +13,7 @@ import { useSession } from "next-auth/react";
 import Swal from "sweetalert2";
 import Review from "../ReviewForm/Reseñas";
 import { FaStar } from "react-icons/fa";
+import Image from "next/image";
 
 export default function ProductDetail({ id }) {
   const productById = useSelector((state) => state.products.productById);
@@ -120,7 +121,7 @@ export default function ProductDetail({ id }) {
             <div className="p-8 flex items-center justify-center h-full">
               <div className="flex gap-20">
                 <div className="ml-[20%] w-[30%]">
-                  <img src={productById.image} alt={productById.name} />
+                  <Image src={productById.image} alt={productById.name} />
                 </div>
                 <div>
                   <h1 className="text-3xl font-bold mb-4">

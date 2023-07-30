@@ -4,6 +4,7 @@ import axios from "axios";
 import s from "./success.module.css";
 import { getOrderItem } from "../../redux/features/orderItemsSlice";
 import { useDispatch, useSelector } from "react-redux";
+import Image from "next/image";
 
 export default function Success() {
   const router = useRouter();
@@ -16,6 +17,7 @@ export default function Success() {
     const stocksS = JSON.parse(orderS);
     dispatch(getOrderItem(stocksS));
     // return setTimeout(postOrder, 3000);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const postOrder = async () => {
@@ -41,8 +43,8 @@ export default function Success() {
         <div className={s.card}>
           {orderBuy.items &&
             orderBuy.items.map((p) => (
-              <div className=" w-[370px] shadow-[1px_1px_20px_rgba(0,0,0,0.2)] rounded-md relative p-[10px] justify-start items-center mb-[5px] flex">
-                <img
+              <div key={p.name} className=" w-[370px] shadow-[1px_1px_20px_rgba(0,0,0,0.2)] rounded-md relative p-[10px] justify-start items-center mb-[5px] flex">
+                <Image
                   className="w-[70px] rounded-full mr-[20px]"
                   src={p.image}
                   alt={p.name}

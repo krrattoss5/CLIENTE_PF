@@ -135,7 +135,7 @@ export default function Login() {
               className={styles.button_custom}
             >
               Acceder con Google{" "}
-              <Image src={"/assets/google.svg"} width="20" height={20} />
+              <Image src={"/assets/google.svg"} alt='' width="20" height={20} />
             </button>
           </div>
         </form>

@@ -12,6 +12,7 @@ import {
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import AddTaskIcon from "@mui/icons-material/AddTask";
+import Image from "next/image";
 
 export default function Card(props) {
   const favorites = useSelector((s) => s.favorites.value);
@@ -54,6 +55,7 @@ export default function Card(props) {
         setIsFav(true);
       }
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [favorites]);
 
   useEffect(() => {
@@ -63,6 +65,7 @@ export default function Card(props) {
     } else {
       setIsStack(true);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [stack]);
 
   return (
@@ -72,7 +75,7 @@ export default function Card(props) {
     >
       <Link href={`/product/${id}`}>
         <div className="flex flex-col justify-center items-center">
-          <img src={image} alt={name} className="w-[220px] h-[200px] gap-4" />
+          <Image src={image} alt={name} className="w-[220px] h-[200px] gap-4" />
         </div>
       </Link>
 

@@ -71,6 +71,7 @@ const Container = (props) => {
         }
       })();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -79,11 +80,13 @@ const Container = (props) => {
     if (user) {
       dispatch(getUser(user));
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     dispatch(getProd());
     dispatch(cleanProductsByCategory());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cats]);
 
   if (catProducts.length < 1 && cat) {

@@ -30,6 +30,7 @@ export default function FormCreateCategory() {
     if (subcategories.length < 1) {
       dispatch(getSubCats());
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [categ, subcategories]);
 
   const handlerInput = (e) => {
@@ -140,7 +141,7 @@ export default function FormCreateCategory() {
 
               <div className="">
                 {categ.map((category) => {
-                  return <div className="">{category?.name}</div>;
+                  return <div key={category?.name} className="">{category?.name}</div>;
                 })}
               </div>
             </form>
@@ -161,7 +162,7 @@ export default function FormCreateCategory() {
 
               <div className="">
                 {subcategories.map((subcategory) => {
-                  return <div className="">{subcategory.name}</div>;
+                  return <div key={subcategory.name} className="">{subcategory.name}</div>;
                 })}
               </div>
             </form>
