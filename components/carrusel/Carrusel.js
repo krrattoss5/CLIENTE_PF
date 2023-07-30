@@ -20,7 +20,7 @@ const slides = [
     id: 4,
     title: "Slide 4",
     image: "https://images.pexels.com/photos/949128/pexels-photo-949128.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  },
+  }
 ];
 
 
@@ -55,12 +55,12 @@ function MyCarousel() {
             alignItems: 'center',
             justifyContent: 'center',
             height: '480px',
+            width:"100vw",
             boxShadow: '1px'
           }}>
-            <Image src={slide.image} alt={slide.title}
+            <Image src={slide.image} alt={slide.title} width={0} height={0}
               style={{
                 height: '100%',
-                width: '100vw',
                 overflow: 'hidden',
                 objectFit: 'cover',
                 // oculta la parte visible de la imagen que sobresale

@@ -9,7 +9,7 @@ import {
 import { GiWeightLiftingUp } from "react-icons/gi";
 import { getProdsByCat } from "../../redux/actions/actionProduct";
 import { useDispatch } from "react-redux";
-import { Filters } from "../filtros/Filters";
+import { Filters } from "../filtros/Filtros";
 import { setFlag, clearFind } from "../../redux/features/productsSlice";
 
 const categories = [
