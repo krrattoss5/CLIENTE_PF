@@ -6,7 +6,7 @@ const ProductDetails = () => {
   const {id} = router.query;
 
   return (
-      <ProductDetail id={id}/>
+    <ProductDetail id={id}/>
   );
 };
 
