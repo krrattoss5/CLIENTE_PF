@@ -1,0 +1,29 @@
+.container{
+  width: 250px;
+  height: 350px;
+  box-shadow: 4px 4px 20px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  padding: 0 10px 10px 10px;
+}
+.image{
+  border-radius: 15px;
+  height: 200px;
+  width: 250px;
+}
+.category{
+  background-color: rgb(9, 32, 84);
+  color:white;
+  font-weight: bold;
+  width: 230px;
+  padding: 5px;
+  font-size: 1.2rem;
+  margin-left: -10px;
+  border-radius: 0 20px 20px 0;
+}
+.price{
+  font-weight: 600;
+  margin-top: -15px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}

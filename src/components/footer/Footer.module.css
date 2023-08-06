@@ -1,0 +1,42 @@
+.container{
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  height:350px;
+  width: 100%;
+  background-color: #222;
+}
+.copy{
+  position: absolute;
+  color:white;
+  font-weight: bold;
+  bottom: 10px;
+  left: 10px;
+}
+.item{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 250px;
+}
+.item a{
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color:white;
+}
+.item h3{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color:rgb(208, 206, 206);
+}
+.image{
+  filter: contrast(0%) brightness(30);
+}

@@ -1,0 +1,32 @@
+.container{
+  position: relative;
+  height:100px;
+  width: 98.5%;
+  box-shadow: 1px 1px 20px rgba(0,0,0,0.5);
+  padding:10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image{
+  position: absolute;
+  left:50px;
+  top: 10px;
+  height: 100px;
+  width: 150px;
+}
+.buttons{
+  display: flex;
+  position: absolute;
+  right: 50px;
+}
+
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: rgba(28,41,71,1);
+  border: none;
+  background-color: white;
+}
