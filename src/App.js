@@ -20,13 +20,13 @@ function App() {
 
   return (
     <div className="App">
-      {location.pathname !== '/'?<Menu />:null}
       {location.pathname !== '/'?<Nav />:null}
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/home' element={<Home />} />
       </Routes>
       {location.pathname !== '/'?<Footer />:null}
+      {location.pathname !== '/'?<Menu />:null}
     </div>
   );
 }
