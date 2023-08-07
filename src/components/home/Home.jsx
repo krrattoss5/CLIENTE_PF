@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../card/Card'
+import Cards from '../cards/Cards'
 import { useSelector } from 'react-redux'
 import s from './Home.module.css'
 import Slider from '../slider/Slider'
@@ -12,15 +12,7 @@ export default function Home() {
     <div className={s.container}>
       <Slider />
       <Categories />
-      {!products?null:products.map(p=>
-        <Card
-        key={p.name}
-        image={p.image}
-        name={p.name}
-        price={p.price}
-        category={p.category}
-        />
-        )}
+      {!products?null:<Cards products={products}/>}
     </div>
   )
 }

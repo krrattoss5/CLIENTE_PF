@@ -1,4 +1,4 @@
-import { GET_PRODUCTS, SET_FLAG,GET_PRODUCTS_BY_CAT,GET_CAT,GET_SUBCAT,GET_PRODUCTS_BY_SUBCAT } from "./types";
+import { GET_PRODUCTS, SET_FLAG,GET_PRODUCTS_BY_CAT,GET_CAT,GET_SUBCAT,GET_PRODUCTS_BY_SUBCAT,GET_ORDER_BY_AZ,GET_ORDER_BY_ZA,GET_ORDER_BY_MAYOR,GET_ORDER_BY_MENOR } from "./types";
 import axios from "axios";
 
 export function getProducts(){
@@ -13,7 +13,6 @@ export function getProducts(){
     })
   }
 }
-
 export function setFlag(f){
   return{
     type:SET_FLAG,
@@ -31,7 +30,6 @@ export function setFlag(f){
       });
     }
   };
-
   export function getCat(){
     return async (dispatch)=>{
       await axios("https://api-mundo-gym.onrender.com/category")
@@ -43,7 +41,6 @@ export function setFlag(f){
       });
     }
   };
-
   export function getSubCats(){
     return async (dispatch)=>{
       await axios("https://api-mundo-gym.onrender.com/subcategory").then(({ data }) =>{
@@ -54,7 +51,6 @@ export function setFlag(f){
       });
     }
   };
-  
   export function getProdsBySubCat(subCat){
     return async (dispatch)=>{
       await axios(`https://api-mundo-gym.onrender.com/filterSub?subcategory=${subCat}`).then(({ data }) =>{
@@ -64,4 +60,48 @@ export function setFlag(f){
       })
     });
   }
+};
+export function getOrderAlphabeticAZ(){
+  return async (dispatch)=>{
+    await axios.get(`https://api-mundo-gym.onrender.com/order/alphabetic/AZ`)
+    .then(({data})=>{
+      return dispatch({
+        type:GET_ORDER_BY_AZ,
+        payload:data
+      })
+    })
+  };
+};
+export function getOrderAlphabeticZA(){
+  return async (dispatch)=>{
+    await axios.get(`https://api-mundo-gym.onrender.com/order/alphabetic/ZA`)
+    .then(({data})=>{
+      return dispatch({
+        type:GET_ORDER_BY_ZA,
+        payload:data
+      })
+    })
+  };
+};
+export function getOrderPriceMm(){
+  return async (dispatch)=> {
+    await axios.get(`https://api-mundo-gym.onrender.com/order/price/Mm`)
+    .then(({data})=>{
+      return dispatch({
+        type:GET_ORDER_BY_MAYOR,
+        payload:data
+      })
+    })
+  };
+};
+export function getOrderPricemM(){
+  return async (dispatch)=> {
+    await axios.get(`https://api-mundo-gym.onrender.com/order/price/mM`)
+    .then(({data})=>{
+      return dispatch({
+        type:GET_ORDER_BY_MENOR,
+        payload:data
+      })
+    })
+  };
 };

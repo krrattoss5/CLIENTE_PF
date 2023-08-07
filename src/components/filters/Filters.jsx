@@ -1,32 +1,42 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setFlag,getProdsByCat,getCat,getProducts,getSubCats,getProdsBySubCat } from "../../redux/actions/actions";
+import {
+  setFlag,
+  getProdsByCat,
+  getCat,
+  getProducts,
+  getSubCats,
+  getProdsBySubCat,
+  getOrderAlphabeticAZ,
+  getOrderAlphabeticZA,
+  getOrderPriceMm,
+  getOrderPricemM
+} from "../../redux/actions/actions";
 import s from './Filters.module.css'
 //import SearchBar from "../searchBar/SearchBar";
 
 export default function Filters(){
   const dispatch = useDispatch()
-  const { category, subCategory } = useSelector(s=>s)
+  const { category, subCategory,flag } = useSelector(s=>s)
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedSubCategory, setSelectedSubCategory] = useState("");
 
 
-  // const dispatch = useDispatch();
-  // const orderAlphabetic = (e) => {
-  //   if (e.target.value === "asc") {
-  //     dispatch(getOrderAlphabeticAZ());
-  //   } else {
-  //     dispatch(getOrderAlphabeticZA());
-  //   }
-  // };
+  const orderAlphabetic = (e) => {
+    if (e.target.value === "asc") {
+      dispatch(getOrderAlphabeticAZ());
+    } else {
+      dispatch(getOrderAlphabeticZA());
+    }
+  };
 
-  // const orderPrice = (e) => {
-  //   if (e.target.value === "Mm") {
-  //     dispatch(getOrderPriceMm());
-  //   } else {
-  //     dispatch(getOrderPricemM());
-  //   }
-  // };
+  const orderPrice = (e) => {
+    if (e.target.value === "Mm") {
+      dispatch(getOrderPriceMm());
+    } else {
+      dispatch(getOrderPricemM());
+    }
+  };
 
   // const orderCategoryAlphabetic = (e) => {
   //   if (e.target.value === "asc") {
@@ -83,6 +93,7 @@ export default function Filters(){
       dispatch(getCat());
       dispatch(getSubCats());
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // const orderSubCategoryAlphabetic = (e) => {
@@ -115,7 +126,7 @@ export default function Filters(){
         onChange={handlerFlag}
         className={s.selects}
       >
-        <option default selected>
+        <option disabled value={'default'}>
           Categorias
         </option>
         {category.map((c) => (
@@ -127,37 +138,37 @@ export default function Filters(){
       value={selectedSubCategory}
       onChange={handlerSubFlag}
       className={s.selects}>
-        <option default selected>Sub Categorias</option>
+        <option disabled value={'default'}>Sub Categorias</option>
         {subCategory.map((c) =>
           <option key={c.name}>{c.name}</option>
         )}
       </select>
 
-      {/* {!flag ? (
+      {!flag ? (
         <select
-          //onChange={orderAlphabetic}
-          className="p-2 border-none rounded-md focus:outline-none bg-[rgb(28,41,71,1)] text-[#fff] font-bold cursor-pointer box-shadow-xl"
+          onChange={orderAlphabetic}
+          className={s.selects}
         >
-          <option disabled selected>
+          <option disabled value={'default'}>
             Orden
           </option>
           <option value="asc">A-Z</option>
           <option value="desc">Z-A</option>
         </select>
-      ) : null} */}
+      ) : null}
 
-      {/* {!flag ? (
+      {!flag ? (
         <select
-          //onChange={orderPrice}
-          className="p-2 border-none rounded-md focus:outline-none bg-[rgb(28,41,71,1)] text-[#fff] font-bold  cursor-pointer box-shadow-xl"
+          onChange={orderPrice}
+          className={s.selects}
         >
-          <option disabled selected>
+          <option disabled value={'default'}>
             Precio
           </option>
           <option value="mM">Menor - Mayor</option>
           <option value="Mm">Mayor - Menor</option>
         </select>
-      ) : null} */}
+      ) : null}
 
       {/* {flag && flag.slice(0, 7) !== "search/" && flag.slice(0, 4) !== "sub/" ? (
         <select

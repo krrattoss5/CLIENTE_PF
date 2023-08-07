@@ -1,5 +1,6 @@
 .container{
-  width: 250px;
+  max-width: 300px;
+  min-width: 250px;
   height: 350px;
   box-shadow: 4px 4px 20px rgba(0,0,0,0.5);
   border-radius: 15px;
@@ -15,7 +16,8 @@
   background-color: rgb(9, 32, 84);
   color:white;
   font-weight: bold;
-  width: 230px;
+  max-width: 295px;
+  min-width: 245px;
   padding: 5px;
   font-size: 1.2rem;
   margin-left: -10px;
