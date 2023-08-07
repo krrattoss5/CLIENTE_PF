@@ -1,4 +1,4 @@
-import { GET_PRODUCTS, SET_FLAG,GET_PRODUCTS_BY_CAT,GET_CAT,GET_SUBCAT,GET_PRODUCTS_BY_SUBCAT } from "./actions/types";
+import { GET_PRODUCTS, SET_FLAG,GET_PRODUCTS_BY_CAT,GET_CAT,GET_SUBCAT,GET_PRODUCTS_BY_SUBCAT,GET_ORDER_BY_AZ,GET_ORDER_BY_ZA,GET_ORDER_BY_MAYOR,GET_ORDER_BY_MENOR } from "./actions/types";
 const initialState = {
   products: [],
   category: [],
@@ -38,6 +38,26 @@ export default function rootReducer(state = initialState,{type,payload}){
       return{
         ...state,
         subCategory:[...payload]
+      }
+    case GET_ORDER_BY_AZ:
+      return{
+        ...state,
+        products:[...payload]
+      }
+    case GET_ORDER_BY_ZA:
+      return{
+        ...state,
+        products:[...payload]
+      }
+    case GET_ORDER_BY_MAYOR:
+      return{
+        ...state,
+        products:[...payload]
+      }
+    case GET_ORDER_BY_MENOR:
+      return{
+        ...state,
+        products:[...payload]
       }
 
     default:
