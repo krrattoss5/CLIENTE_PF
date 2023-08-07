@@ -8,6 +8,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Nav from './components/nav/Nav';
 import Footer from './components/footer/Footer';
 import Menu from './components/menu/Menu';
+import Slider from './components/slider/Slider';
 
 function App() {
   const location = useLocation()
@@ -21,6 +22,7 @@ function App() {
   return (
     <div className="App">
       {location.pathname !== '/'?<Nav />:null}
+      {location.pathname !== '/'?<Slider />:null}
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/home' element={<Home />} />

@@ -6,6 +6,7 @@ import {
   FaDumbbell
 } from "react-icons/fa";
 import { GiWeightLiftingUp } from "react-icons/gi";
+import Filters from "../filters/Filters";
 
 
 const categories = [
@@ -62,6 +63,7 @@ function Categories() {
         ))}
       </div>
       <div className={s.filters}>
+        <Filters />
       </div>
     </div>
   );

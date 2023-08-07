@@ -1,1 +1,6 @@
 export const GET_PRODUCTS = 'GET_PRODUCTS'
+export const GET_CAT = 'GET_CAT'
+export const GET_SUBCAT = 'GET_SUBCAT'
+export const SET_FLAG = 'SET_FLAG'
+export const GET_PRODUCTS_BY_CAT = 'GET_PRODUCTS_BY_CAT'
+export const GET_PRODUCTS_BY_SUBCAT = 'GET_PRODUCTS_BY_SUBCAT'

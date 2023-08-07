@@ -1,0 +1,37 @@
+.container{
+  width: 90%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  background-color: rgb(28,41,71,1);
+  box-shadow: 4px 4px 20px rgb(28,41,71,1);
+  /* "filtersContainer h-[100%] flex justify-center w-[250px] items-center space-x-4 py-4" */
+}
+.selects{
+  height: 50px;
+  padding: 8px;
+  border:none;
+  border-radius: 10px;
+  outline: none;
+  background-color: rgb(28,41,71,1);
+  color:white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.all{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background-color: rgb(28,41,71,1);
+  color:white;
+  font-weight: bold;
+  cursor: pointer;
+}
