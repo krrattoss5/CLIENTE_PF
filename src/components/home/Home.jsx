@@ -3,6 +3,7 @@ import Card from '../card/Card'
 import { useSelector } from 'react-redux'
 import s from './Home.module.css'
 import Slider from '../slider/Slider'
+import Categories from '../categories/Categories'
 
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
   return (
     <div className={s.container}>
       <Slider />
+      <Categories />
       {!products?null:products.map(p=>
         <Card
         key={p.name}
