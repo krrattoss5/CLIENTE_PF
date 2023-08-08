@@ -13,7 +13,7 @@ import {
   getOrderPricemM
 } from "../../redux/actions/actions";
 import s from './Filters.module.css'
-//import SearchBar from "../searchBar/SearchBar";
+import SearchBar from "../searchBar/SearchBar";
 
 export default function Filters(){
   const dispatch = useDispatch()
@@ -238,7 +238,7 @@ export default function Filters(){
       </select>:null} */}
 
       <div className="absolute right-[5px] w-[300px]">
-        {/* <SearchBar /> */}
+        <SearchBar />
       </div>
     </div>
   );
