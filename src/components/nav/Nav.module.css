@@ -34,7 +34,7 @@
 
 @media (max-width: 950px){
     .container{
-      max-width: 950px;
+      width: 94%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -56,7 +56,6 @@
       flex-direction: column;
       margin-top: 10px;
       padding-top: 5px;
-      padding-left: 15%;
       width: 100%;
       border-top: solid 1px rgba(0,0,0,0.5);
     }
