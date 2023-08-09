@@ -51,4 +51,7 @@
     align-items: center;
     padding-top: 50px;
   }
+  .Link SearchBar{
+    display: none;
+  }
 }

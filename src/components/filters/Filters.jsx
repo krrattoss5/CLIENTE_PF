@@ -237,7 +237,7 @@ export default function Filters(){
         <option value="Mm">Mayor - Menor</option>
       </select>:null} */}
 
-      <div className="absolute right-[5px] w-[300px]">
+      <div className={s.search}>
         <SearchBar />
       </div>
     </div>
