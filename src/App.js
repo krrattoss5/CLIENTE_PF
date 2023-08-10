@@ -9,6 +9,7 @@ import Nav from './components/nav/Nav';
 import Footer from './components/footer/Footer';
 import Menu from './components/menu/Menu';
 import Slider from './components/slider/Slider';
+import Car from './components/car/Car';
 
 function App() {
   const location = useLocation()
@@ -29,6 +30,7 @@ function App() {
       </Routes>
       {location.pathname !== '/'?<Footer />:null}
       {location.pathname !== '/'?<Menu />:null}
+      <Car />
     </div>
   );
 }
