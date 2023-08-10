@@ -1,10 +1,10 @@
-import { GET_PRODUCTS, SET_FLAG,GET_PRODUCTS_BY_CAT,GET_CAT,GET_SUBCAT,GET_PRODUCTS_BY_SUBCAT,GET_ORDER_BY_AZ,GET_ORDER_BY_ZA,GET_ORDER_BY_MAYOR,GET_ORDER_BY_MENOR,GET_ORDER_BY_NAME } from "./actions/types";
+import { GET_PRODUCTS, SET_FLAG,GET_PRODUCTS_BY_CAT,GET_CAT,GET_SUBCAT,GET_PRODUCTS_BY_SUBCAT,GET_ORDER_BY_AZ,GET_ORDER_BY_ZA,GET_ORDER_BY_MAYOR,GET_ORDER_BY_MENOR,GET_ORDER_BY_NAME,ADD_CAR_PRODUCT,DELETE_CAR_PRODUCT } from "./actions/types";
 const initialState = {
   products: [],
   category: [],
   subCategory: [],
   flag: false,
-
+  car:[]
 }
 
 export default function rootReducer(state = initialState,{type,payload}){
@@ -63,6 +63,17 @@ export default function rootReducer(state = initialState,{type,payload}){
       return{
         ...state,
         products:[...payload]
+      }
+    case ADD_CAR_PRODUCT:
+      return{
+        ...state,
+        car:[...payload]
+      }
+    case DELETE_CAR_PRODUCT:
+      let aux = state.car.filter((p)=>p.id !== +payload)
+      return{
+        ...state,
+        car:[...aux]
       }
 
     default:

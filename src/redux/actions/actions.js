@@ -1,4 +1,4 @@
-import { GET_PRODUCTS, SET_FLAG,GET_PRODUCTS_BY_CAT,GET_CAT,GET_SUBCAT,GET_PRODUCTS_BY_SUBCAT,GET_ORDER_BY_AZ,GET_ORDER_BY_ZA,GET_ORDER_BY_MAYOR,GET_ORDER_BY_MENOR,GET_ORDER_BY_NAME } from "./types";
+import { GET_PRODUCTS, SET_FLAG,GET_PRODUCTS_BY_CAT,GET_CAT,GET_SUBCAT,GET_PRODUCTS_BY_SUBCAT,GET_ORDER_BY_AZ,GET_ORDER_BY_ZA,GET_ORDER_BY_MAYOR,GET_ORDER_BY_MENOR,GET_ORDER_BY_NAME, ADD_CAR_PRODUCT, DELETE_CAR_PRODUCT } from "./types";
 import axios from "axios";
 import Swal from "sweetalert2";
 
@@ -128,3 +128,15 @@ export function getProductByName(name){
     }
   }
 };
+export function addCarProduct(p){
+  return{
+    type:ADD_CAR_PRODUCT,
+    payload:p
+  }
+}
+export function deleteCarProduct(id){
+  return{
+    type:DELETE_CAR_PRODUCT,
+    payload:id
+  }
+}

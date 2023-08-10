@@ -37,3 +37,42 @@
   position: absolute;
   top: -20px;
 }
+.section{
+  width: 150px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.M{
+  border: none;
+  outline: none;
+  color: white;
+  font-weight:900;
+  border-radius: 20px 0 0 20px;
+  color: white;
+  background-color: rgb(28,41,71,1);
+  background-color: rgb(28,41,71,1);
+  box-shadow: -1px 1px 10px rgba(0,0,0,0.5);
+}
+.M:hover{
+  box-shadow: -1px 1px 10px rgba(0,0,0,1);
+}
+.M:active{
+  color: rgb(28,41,71,1);
+  background-color: white;
+}
+.m{
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 0 20px 20px 0;
+  background-color: rgb(28,41,71,1);
+  box-shadow: -1px 1px 10px rgba(0,0,0,0.5);
+}
+.m:hover{
+  box-shadow: -1px 1px 10px rgba(0,0,0,1);
+}
+.m:active{
+  color: rgb(28,41,71,1);
+  background-color: white;
+}
