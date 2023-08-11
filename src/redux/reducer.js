@@ -1,4 +1,4 @@
-import { GET_PRODUCTS, SET_FLAG,GET_PRODUCTS_BY_CAT,GET_CAT,GET_SUBCAT,GET_PRODUCTS_BY_SUBCAT,GET_ORDER_BY_AZ,GET_ORDER_BY_ZA,GET_ORDER_BY_MAYOR,GET_ORDER_BY_MENOR,GET_ORDER_BY_NAME,ADD_CAR_PRODUCT,DELETE_CAR_PRODUCT } from "./actions/types";
+import { GET_PRODUCTS, SET_FLAG,GET_PRODUCTS_BY_CAT,GET_CAT,GET_SUBCAT,GET_PRODUCTS_BY_SUBCAT,GET_ORDER_BY_AZ,GET_ORDER_BY_ZA,GET_ORDER_BY_MAYOR,GET_ORDER_BY_MENOR,GET_ORDER_BY_NAME,ADD_CAR_PRODUCT,DELETE_CAR_PRODUCT, ADD_STORAGE_PRODCTS } from "./actions/types";
 const initialState = {
   products: [],
   category: [],
@@ -67,13 +67,18 @@ export default function rootReducer(state = initialState,{type,payload}){
     case ADD_CAR_PRODUCT:
       return{
         ...state,
-        car:[...payload]
+        car:[...state.car,payload]
       }
     case DELETE_CAR_PRODUCT:
-      let aux = state.car.filter((p)=>p.id !== +payload)
+      let aux = state.car.filter((p)=>p.id !== payload)
       return{
         ...state,
-        car:[...aux]
+        car:aux
+      }
+    case ADD_STORAGE_PRODCTS:
+      return{
+        ...state,
+        car:payload
       }
 
     default:
