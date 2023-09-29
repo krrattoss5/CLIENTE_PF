@@ -10,7 +10,7 @@ import { useEffect } from 'react';
 
 export default function Card(props) {
 
-  const { car } = useSelector(s=>s)
+  const car = useSelector(s=>s.car)
   const dispatch = useDispatch()
   const [inCar,setInCar] = useState(false)
 
