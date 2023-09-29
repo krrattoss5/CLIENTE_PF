@@ -10,6 +10,7 @@ import Footer from './components/footer/Footer';
 import Menu from './components/menu/Menu';
 import Slider from './components/slider/Slider';
 import Car from './components/car/Car';
+import ProductDetail from './components/productDetail/ProductDetail';
 
 function App() {
   const location = useLocation()
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/home' element={<Home />} />
+        <Route path='/home/detail/:id' element={<ProductDetail />} />
       </Routes>
       {location.pathname !== '/'?<Footer />:null}
       {location.pathname !== '/'?<Menu />:null}
