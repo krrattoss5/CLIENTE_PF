@@ -43,7 +43,15 @@ export default function Car() {
       {!flag
       ?null
       :<div className={s.container1}>
-        <InsideCard />
+        {
+          car.map(p=>
+            <InsideCard
+              image={p.image}
+              name={p.name}
+              price={p.price}
+            />
+          )
+        }
       </div>}
 
       <div className={s.menuB} onClick={()=>handleFlag()}>
