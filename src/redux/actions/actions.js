@@ -1,4 +1,18 @@
-import { GET_PRODUCTS, SET_FLAG,GET_PRODUCTS_BY_CAT,GET_CAT,GET_SUBCAT,GET_PRODUCTS_BY_SUBCAT,GET_ORDER_BY_AZ,GET_ORDER_BY_ZA,GET_ORDER_BY_MAYOR,GET_ORDER_BY_MENOR,GET_ORDER_BY_NAME, ADD_CAR_PRODUCT, DELETE_CAR_PRODUCT, ADD_STORAGE_PRODCTS } from "./types";
+import { GET_PRODUCTS,
+          SET_FLAG,
+          GET_PRODUCTS_BY_CAT,
+          GET_CAT,
+          GET_SUBCAT,
+          GET_PRODUCTS_BY_SUBCAT,
+          GET_ORDER_BY_AZ,
+          GET_ORDER_BY_ZA,
+          GET_ORDER_BY_MAYOR,
+          GET_ORDER_BY_MENOR,
+          GET_ORDER_BY_NAME,
+          ADD_CAR_PRODUCT,
+          DELETE_CAR_PRODUCT,
+          ADD_STORAGE_PRODCTS,
+          GET_PRODUCT_BY_ID } from "./types";
 import axios from "axios";
 import Swal from "sweetalert2";
 
@@ -9,6 +23,18 @@ export function getProducts(){
     .then(({data})=>{
       return dispatch({
         type:GET_PRODUCTS,
+        payload:data
+      })
+    })
+  }
+}
+export function getProductById(id){
+  const endPoint = `https://api-mundo-gym.onrender.com/products/${id}`
+  return async (dispatch)=>{
+    await axios.get(endPoint)
+    .then(({data})=>{
+      return dispatch({
+        type:GET_PRODUCT_BY_ID,
         payload:data
       })
     })

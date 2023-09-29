@@ -26,9 +26,9 @@ export default function Car() {
     if (stock.length) {
       dispatch(addStorageProducts(stock));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   },[]);
-  
+
   useEffect(()=>{
     const item = localStorage.getItem("car");
     const stock = JSON.parse(item);
