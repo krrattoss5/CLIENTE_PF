@@ -7,7 +7,7 @@ import Categories from '../categories/Categories'
 
 
 export default function Home() {
-  const { products } = useSelector(s=>s)
+  const products = useSelector(s=>s.products)
   return (
     <div className={s.container}>
       <Slider />

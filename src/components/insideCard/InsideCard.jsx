@@ -1,10 +1,15 @@
 import React from 'react'
 import s from './InsideCard.module.css'
+import { useDispatch } from 'react-redux'
+import { deleteCarProduct } from '../../redux/actions/actions'
 
 export default function InsideCard(props) {
+
+  const dispatch = useDispatch()
+
   return (
     <div className={s.container}>
-      <button className={s.button}>x</button>
+      <button className={s.button} onClick={()=>dispatch(deleteCarProduct(props.id))}>x</button>
       <img src={props.image} alt="" className={s.image}/>
       <h3 className={s.title}>{props.name}</h3>
 

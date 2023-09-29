@@ -17,7 +17,9 @@ import SearchBar from "../searchBar/SearchBar";
 
 export default function Filters(){
   const dispatch = useDispatch()
-  const { category, subCategory,flag } = useSelector(s=>s)
+  const category = useSelector(s=>s.category)
+  const subCategory = useSelector(s=>s.subCategory)
+  const flag = useSelector(s=>s.flag)
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedSubCategory, setSelectedSubCategory] = useState("");
 
