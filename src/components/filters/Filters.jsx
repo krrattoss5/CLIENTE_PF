@@ -13,11 +13,13 @@ import {
   getOrderPricemM
 } from "../../redux/actions/actions";
 import s from './Filters.module.css'
-//import SearchBar from "../searchBar/SearchBar";
+import SearchBar from "../searchBar/SearchBar";
 
 export default function Filters(){
   const dispatch = useDispatch()
-  const { category, subCategory,flag } = useSelector(s=>s)
+  const category = useSelector(s=>s.category)
+  const subCategory = useSelector(s=>s.subCategory)
+  const flag = useSelector(s=>s.flag)
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedSubCategory, setSelectedSubCategory] = useState("");
 
@@ -237,8 +239,8 @@ export default function Filters(){
         <option value="Mm">Mayor - Menor</option>
       </select>:null} */}
 
-      <div className="absolute right-[5px] w-[300px]">
-        {/* <SearchBar /> */}
+      <div className={s.search}>
+        <SearchBar />
       </div>
     </div>
   );

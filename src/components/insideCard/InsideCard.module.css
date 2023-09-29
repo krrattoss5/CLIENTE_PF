@@ -1,0 +1,78 @@
+.container{
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  position: relative;
+  width: 95%;
+  height: 80px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button{
+  top: 0;
+  right: 0;
+  border: none;
+  color:white;
+  outline: none;
+  font-weight: bold;
+  position: absolute;
+  background-color: red;
+  border-radius: 0px 10px 0px 3px;
+}
+.button:hover{
+  box-shadow: -1px 1px 5px red;
+}
+.button:active{
+  color:red;
+  background-color: white;
+}
+.image{
+  position: absolute;
+  left: 0;
+  height: 75px;
+  margin: 2.5px 0 2.5px 2.5px;
+  border-radius: 15px;
+}
+.title{
+  position: absolute;
+  top: -20px;
+}
+.section{
+  width: 150px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.M{
+  border: none;
+  outline: none;
+  color: white;
+  font-weight:900;
+  border-radius: 20px 0 0 20px;
+  color: white;
+  background-color: rgb(28,41,71,1);
+  background-color: rgb(28,41,71,1);
+  box-shadow: -1px 1px 10px rgba(0,0,0,0.5);
+}
+.M:hover{
+  box-shadow: -1px 1px 10px rgba(0,0,0,1);
+}
+.M:active{
+  color: rgb(28,41,71,1);
+  background-color: white;
+}
+.m{
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 0 20px 20px 0;
+  background-color: rgb(28,41,71,1);
+  box-shadow: -1px 1px 10px rgba(0,0,0,0.5);
+}
+.m:hover{
+  box-shadow: -1px 1px 10px rgba(0,0,0,1);
+}
+.m:active{
+  color: rgb(28,41,71,1);
+  background-color: white;
+}

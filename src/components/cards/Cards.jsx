@@ -7,6 +7,8 @@ export default function Cards({products}) {
     <div className={s.container}>
       {!products?null:products.map(p=>
         <Card
+        p={p}
+        id={p.id}
         key={p.name}
         image={p.image}
         name={p.name}

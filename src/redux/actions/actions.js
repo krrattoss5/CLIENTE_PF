@@ -1,5 +1,6 @@
-import { GET_PRODUCTS, SET_FLAG,GET_PRODUCTS_BY_CAT,GET_CAT,GET_SUBCAT,GET_PRODUCTS_BY_SUBCAT,GET_ORDER_BY_AZ,GET_ORDER_BY_ZA,GET_ORDER_BY_MAYOR,GET_ORDER_BY_MENOR } from "./types";
+import { GET_PRODUCTS, SET_FLAG,GET_PRODUCTS_BY_CAT,GET_CAT,GET_SUBCAT,GET_PRODUCTS_BY_SUBCAT,GET_ORDER_BY_AZ,GET_ORDER_BY_ZA,GET_ORDER_BY_MAYOR,GET_ORDER_BY_MENOR,GET_ORDER_BY_NAME, ADD_CAR_PRODUCT, DELETE_CAR_PRODUCT, ADD_STORAGE_PRODCTS } from "./types";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 export function getProducts(){
   const endPoint = 'https://api-mundo-gym.onrender.com/products/'
@@ -105,3 +106,43 @@ export function getOrderPricemM(){
     })
   };
 };
+export function getProductByName(name){
+  return async (dispatch)=>{
+    try {
+      await axios(`https://api-mundo-gym.onrender.com/products?name=${name}`)
+    .then(({ data }) =>{
+      dispatch(setFlag(`search/${name}`));
+      return dispatch({
+        type:GET_ORDER_BY_NAME,
+        payload:data
+      })
+    });
+    } catch (error) {
+      return Swal.fire({
+        position: "top",
+        icon: "warning",
+        title: "Producto no encontrado!",
+        showConfirmButton: false,
+        timer: 2000,
+      });
+    }
+  }
+};
+export function addCarProduct(p){
+  return{
+    type:ADD_CAR_PRODUCT,
+    payload:p
+  }
+}
+export function deleteCarProduct(id){
+  return{
+    type:DELETE_CAR_PRODUCT,
+    payload:id
+  }
+}
+export function addStorageProducts(stock){
+  return{
+    type:ADD_STORAGE_PRODCTS,
+    payload:stock
+  }
+}

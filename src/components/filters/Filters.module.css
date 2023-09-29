@@ -43,7 +43,7 @@
     background-color: rgba(0, 0, 0, 0);
     position: absolute;
     box-shadow: 0 0 0;
-    top: 32%;
+    top: 38%;
     left: 0;
   }
   .selects{
@@ -66,5 +66,8 @@
     border-radius: 0;
     background-color: black;
     margin-bottom: 5px;
+  }
+  .search{
+    display: none;
   }
 }

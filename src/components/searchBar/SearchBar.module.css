@@ -1,0 +1,33 @@
+.container{
+  display: flex;
+  max-width: 350px;
+}
+.imput{
+  width: 80%;
+  padding: 8px;
+  border: none;
+  outline: none;
+  border-radius: 20px 0 0 20px;
+  box-shadow:4px 4px 20px rgba(0,0,0,0.5)
+  /* 'outline-none p-2 rounded-l-lg shadow-md' */
+}
+.button{
+  padding: 8px;
+  outline: none;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  background-color: rgba(28,41,71,1);
+  color: white;
+  box-shadow:4px 4px 20px rgba(0,0,0,0.5)
+}
+  .button:active{
+    color:rgba(28,41,71,1);
+    background-color: white;
+  }
+
+  @media (max-width:950px){
+    .container{
+      width: 100%;
+      margin-left: 30px;
+    }
+  }
