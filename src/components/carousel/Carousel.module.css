@@ -1,0 +1,47 @@
+.carousel {
+  margin-top: -25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; /* Oculta las partes de las imágenes que se desborden */
+}
+
+.carousel_image {
+  width: 100%;
+  max-height: 300px; /* Ajusta el tamaño de acuerdo a tus necesidades */
+  object-fit: cover; /* Ajusta el comportamiento de la imagen */
+  transition: transform 0.5s ease-in-out; /* Agrega una animación de deslizamiento suave */
+}
+
+.prev_button,
+.next_button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 15px 10px 15px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1; /* Asegura que los botones estén en la parte superior de las imágenes */
+}
+
+.prev_button:hover,
+.next_button:hover{
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 15px white;
+}
+
+.prev_button {
+  left: 10px;
+}
+
+.next_button {
+  right: 10px;
+}
