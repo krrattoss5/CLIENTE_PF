@@ -52,6 +52,7 @@ export default function ProductDetail() {
       <div className={s.containerInfo}>
         <p className={s.gancho}>Nuevo | Más de 10mil vendidos</p>
         <h1 className={s.title}>{product.name}</h1>
+        <img src={product.image} alt={product.name} className={s.imageResponsive}/>
         <p className={s.description}>{product.description}</p>
         <p className={s.before}>${before}</p>
         <p className={s.price}><AttachMoneyIcon />{product.price}<span className={s.descuento}>{Math.ceil((before - product.price) / before * 100)}% OFF</span></p>

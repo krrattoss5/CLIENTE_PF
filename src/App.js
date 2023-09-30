@@ -28,7 +28,8 @@ function App() {
   return (
     <div className="App">
       {location.pathname !== '/'?<Nav />:null}
-      {location.pathname !== '/'?<Carousel />:null}
+      {location.pathname !== '/'
+      && location.pathname !== '/home'?<Carousel />:null}
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/home' element={<Home />} />

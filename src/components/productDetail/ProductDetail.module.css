@@ -28,6 +28,9 @@
   max-height: 600px;
   border-bottom: solid 1px rgba(0,0,0,0.2);
 }
+.imageResponsive{
+  display: none;
+}
 .containerInfo{
   display: flex;
   flex-direction: column;
@@ -96,4 +99,47 @@
   background-color: #3483fa;
   color: white;
   font-size: 14px;
+}
+
+@media (max-width:950px) {
+  .container_detail{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin: 0;
+  }
+  .containerInfo{
+    width: 90%;
+    margin-top: -5%;
+    padding-bottom: 20px;
+  }
+  .image{
+    display: none;
+  }
+  .headerCategory{
+    display: none;
+  }
+  .imageResponsive{
+    width: 70%;
+    display: block;
+  }
+  .button{
+    width: 85%;
+  }
+}
+
+@media (max-width:414px){
+  .containerInfo{
+    width: 100%;
+    margin-top: -15%;
+    border: none;
+    box-shadow: none;
+  }
+  .imageResponsive{
+    width: 100%;
+  }
+  .button{
+    width: 85%;
+  }
 }

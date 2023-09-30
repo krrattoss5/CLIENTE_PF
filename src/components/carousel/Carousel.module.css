@@ -45,3 +45,9 @@
 .next_button {
   right: 10px;
 }
+
+@media (max-width:950px){
+  .carousel{
+    display: none;
+  }
+}
