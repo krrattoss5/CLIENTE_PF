@@ -1,24 +1,22 @@
 .container{
   position: relative;
-  max-width: 300px;
-  min-width: 250px;
-  height: 350px;
+  width: 210px;
+  height: 420px;
   box-shadow: 4px 4px 20px rgba(0,0,0,0.5);
   border-radius: 15px;
   padding: 0 10px 10px 10px;
-  margin: 10px 15px;
+  margin: 10px 8px;
 }
 .image{
   border-radius: 15px;
   height: 200px;
-  width: 250px;
+  width: 209px;
 }
 .category{
   background-color: rgb(9, 32, 84);
   color:white;
   font-weight: bold;
-  max-width: 295px;
-  min-width: 245px;
+  width: 209px;
   padding: 5px;
   font-size: 1.2rem;
   margin-left: -10px;
@@ -41,6 +39,6 @@
   color: rgb(9, 32, 84);
   box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
   position: absolute;
-  right: 20px;
-  bottom: 40%;
+  right: 12px;
+  bottom: 39%;
 }

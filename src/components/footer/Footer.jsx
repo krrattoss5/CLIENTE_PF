@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <div className={s.container}>
       <div className={s.item}>
-        <img src={icon} alt="mundo gym" className={s.image} />
+        <a href="/#/home"><img src={icon} alt="mundo gym" className={s.image} /></a>
       </div>
       <div className={s.item}></div>
       <div className={s.item}>

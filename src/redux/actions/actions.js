@@ -12,12 +12,17 @@ import { GET_PRODUCTS,
           ADD_CAR_PRODUCT,
           DELETE_CAR_PRODUCT,
           ADD_STORAGE_PRODCTS,
-          GET_PRODUCT_BY_ID } from "./types";
+          GET_PRODUCT_BY_ID,
+          NEXT,
+          BACK,
+          FORCE_CURRENT
+         } from "./types";
 import axios from "axios";
 import Swal from "sweetalert2";
 
 export function getProducts(){
-  const endPoint = 'https://api-mundo-gym.onrender.com/products/'
+  const endPoint = 'https://backend-6ao2.onrender.com/products/'
+  //const endPoint = 'https://api-mundo-gym.onrender.com/products/'
   return async (dispatch)=>{
     await axios.get(endPoint)
     .then(({data})=>{
@@ -29,7 +34,7 @@ export function getProducts(){
   }
 }
 export function getProductById(id){
-  const endPoint = `https://api-mundo-gym.onrender.com/products/${id}`
+  const endPoint = `https://backend-6ao2.onrender.com/products/${id}`
   return async (dispatch)=>{
     await axios.get(endPoint)
     .then(({data})=>{
@@ -48,7 +53,7 @@ export function setFlag(f){
 }
   export function getProdsByCat(cat){
     return async (dispatch)=>{
-      await axios(`https://api-mundo-gym.onrender.com/filterByCategory?category=${cat}`)
+      await axios(`https://backend-6ao2.onrender.com/filterByCategory?category=${cat}`)
       .then(({ data }) =>{
         return dispatch({
           type:GET_PRODUCTS_BY_CAT,
@@ -59,7 +64,7 @@ export function setFlag(f){
   };
   export function getCat(){
     return async (dispatch)=>{
-      await axios("https://api-mundo-gym.onrender.com/category")
+      await axios("https://backend-6ao2.onrender.com/category")
       .then(({ data }) => {
         return dispatch({
           type:GET_CAT,
@@ -70,7 +75,7 @@ export function setFlag(f){
   };
   export function getSubCats(){
     return async (dispatch)=>{
-      await axios("https://api-mundo-gym.onrender.com/subcategory").then(({ data }) =>{
+      await axios("https://backend-6ao2.onrender.com/subcategory").then(({ data }) =>{
         return dispatch({
           type:GET_SUBCAT,
           payload:data
@@ -80,7 +85,7 @@ export function setFlag(f){
   };
   export function getProdsBySubCat(subCat){
     return async (dispatch)=>{
-      await axios(`https://api-mundo-gym.onrender.com/filterSub?subcategory=${subCat}`).then(({ data }) =>{
+      await axios(`https://backend-6ao2.onrender.com/filterSub?subcategory=${subCat}`).then(({ data }) =>{
         return dispatch({
         type:GET_PRODUCTS_BY_SUBCAT,
         payload:data
@@ -90,7 +95,7 @@ export function setFlag(f){
 };
 export function getOrderAlphabeticAZ(){
   return async (dispatch)=>{
-    await axios.get(`https://api-mundo-gym.onrender.com/order/alphabetic/AZ`)
+    await axios.get(`https://backend-6ao2.onrender.com/order/alphabetic/AZ`)
     .then(({data})=>{
       return dispatch({
         type:GET_ORDER_BY_AZ,
@@ -101,7 +106,7 @@ export function getOrderAlphabeticAZ(){
 };
 export function getOrderAlphabeticZA(){
   return async (dispatch)=>{
-    await axios.get(`https://api-mundo-gym.onrender.com/order/alphabetic/ZA`)
+    await axios.get(`https://backend-6ao2.onrender.com/order/alphabetic/ZA`)
     .then(({data})=>{
       return dispatch({
         type:GET_ORDER_BY_ZA,
@@ -112,7 +117,7 @@ export function getOrderAlphabeticZA(){
 };
 export function getOrderPriceMm(){
   return async (dispatch)=> {
-    await axios.get(`https://api-mundo-gym.onrender.com/order/price/Mm`)
+    await axios.get(`https://backend-6ao2.onrender.com/order/price/Mm`)
     .then(({data})=>{
       return dispatch({
         type:GET_ORDER_BY_MAYOR,
@@ -123,7 +128,7 @@ export function getOrderPriceMm(){
 };
 export function getOrderPricemM(){
   return async (dispatch)=> {
-    await axios.get(`https://api-mundo-gym.onrender.com/order/price/mM`)
+    await axios.get(`https://backend-6ao2.onrender.com/order/price/mM`)
     .then(({data})=>{
       return dispatch({
         type:GET_ORDER_BY_MENOR,
@@ -135,7 +140,7 @@ export function getOrderPricemM(){
 export function getProductByName(name){
   return async (dispatch)=>{
     try {
-      await axios(`https://api-mundo-gym.onrender.com/products?name=${name}`)
+      await axios(`https://backend-6ao2.onrender.com/products?name=${name}`)
     .then(({ data }) =>{
       dispatch(setFlag(`search/${name}`));
       return dispatch({
@@ -170,5 +175,21 @@ export function addStorageProducts(stock){
   return{
     type:ADD_STORAGE_PRODCTS,
     payload:stock
+  }
+}
+export function next(){
+  return{
+    type:NEXT
+  }
+}
+export function back(){
+  return{
+    type:BACK
+  }
+}
+export function forceCurrent(num){
+  return{
+    type:FORCE_CURRENT,
+    payload:num
   }
 }
