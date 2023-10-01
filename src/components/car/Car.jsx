@@ -23,7 +23,7 @@ export default function Car() {
   useEffect(() => {
     const item = localStorage.getItem("car");
     const stock = JSON.parse(item);
-    if (stock.length) {
+    if (stock && stock.length) {
       dispatch(addStorageProducts(stock));
     }
     //eslint-disable-next-line react-hooks/exhaustive-deps

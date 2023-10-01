@@ -31,6 +31,14 @@
   border: none;
   background-color: white;
 }
+.NavBox{
+  top: 1.5rem;
+  right: 8rem;
+  position: absolute;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 15px rgba(0,0,0,0.2);
+}
 
 @media (max-width: 950px){
     .container{
