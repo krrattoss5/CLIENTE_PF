@@ -31,6 +31,7 @@
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 .container1{
+  overflow-y: scroll;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -38,10 +39,25 @@
   padding-top: 10px;
   right: 5px;
   bottom: 0;
-  width: 350px;
+  width: 400px;
   height: 400px;
   position: absolute;
   border-radius: 10px 10px 25px 10px;
   background-color: white;
   box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.container1::-webkit-scrollbar {
+  -webkit-appearance:none;
+}
+.container1::-webkit-scrollbar-track {
+  width: 10px;
+}
+
+.container1::-webkit-scrollbar {
+  width:5px;
+}
+
+.container1::-webkit-scrollbar-thumb {
+  background: #b6b6b6;
+  border-radius: 20px;
 }

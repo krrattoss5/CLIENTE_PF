@@ -1,11 +1,12 @@
-import { GET_PRODUCTS, SET_FLAG,GET_PRODUCTS_BY_CAT,GET_CAT,GET_SUBCAT,GET_PRODUCTS_BY_SUBCAT,GET_ORDER_BY_AZ,GET_ORDER_BY_ZA,GET_ORDER_BY_MAYOR,GET_ORDER_BY_MENOR,GET_ORDER_BY_NAME,ADD_CAR_PRODUCT,DELETE_CAR_PRODUCT, ADD_STORAGE_PRODCTS, GET_PRODUCT_BY_ID } from "./actions/types";
+import { GET_PRODUCTS, SET_FLAG,GET_PRODUCTS_BY_CAT,GET_CAT,GET_SUBCAT,GET_PRODUCTS_BY_SUBCAT,GET_ORDER_BY_AZ,GET_ORDER_BY_ZA,GET_ORDER_BY_MAYOR,GET_ORDER_BY_MENOR,GET_ORDER_BY_NAME,ADD_CAR_PRODUCT,DELETE_CAR_PRODUCT, ADD_STORAGE_PRODCTS, GET_PRODUCT_BY_ID, NEXT, BACK, FORCE_CURRENT } from "./actions/types";
 const initialState = {
   products: [],
   productById: [],
   category: [],
   subCategory: [],
   flag: false,
-  car:[]
+  car:[],
+  paginateCurrency:1
 }
 
 export default function rootReducer(state = initialState,{type,payload}){
@@ -85,6 +86,21 @@ export default function rootReducer(state = initialState,{type,payload}){
       return{
         ...state,
         productById:payload
+      }
+    case NEXT:
+      return{
+        ...state,
+        paginateCurrency: state.paginateCurrency + 1
+      }
+    case BACK:
+      return{
+        ...state,
+        paginateCurrency: state.paginateCurrency - 1
+      }
+    case FORCE_CURRENT:
+      return{
+        ...state,
+        paginateCurrency:payload
       }
 
     default:

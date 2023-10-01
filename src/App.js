@@ -8,7 +8,6 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Nav from './components/nav/Nav';
 import Footer from './components/footer/Footer';
 import Menu from './components/menu/Menu';
-import Slider from './components/slider/Slider';
 import Car from './components/car/Car';
 import ProductDetail from './components/productDetail/ProductDetail';
 import Carousel from './components/carousel/Carousel';
@@ -37,7 +36,7 @@ function App() {
       </Routes>
       {location.pathname !== '/'?<Footer />:null}
       {location.pathname !== '/'?<Menu />:null}
-      {!car.length?null:<Car />}
+      <Car />
     </div>
   );
 }

@@ -30,7 +30,7 @@ export default function ProductDetail() {
     } else {
       setInCar(true);
     }
-  },[car])
+  },[car,product.id])
 
   const handleInCar = ()=>{
     if(!inCar){

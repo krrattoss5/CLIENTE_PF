@@ -8,9 +8,9 @@ import SearchBar from '../searchBar/SearchBar'
 export default function Nav() {
   return (
     <div className={s.container}>
-      <img src={icon} alt="" className={s.image} />
+      <a href="/#/home"><img src={icon} alt="mundo gym" className={s.image} /></a>
       <div className={s.buttons}>
-        <button className={s.button}><HomeIcon sx={{ fontSize: 25 }}/></button>
+      <a href="/#/home"><button className={s.button}><HomeIcon sx={{ fontSize: 25 }}/></button></a>
         <button className={s.button}>Entrar <LoginIcon sx={{ fontSize: 25 }}/></button>
       </div>
       <section className={s.section}>
